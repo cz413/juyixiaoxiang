@@ -3,11 +3,13 @@
 </script>
 
 <template>
-  <router-view>
+  <div class="footer">
 
-  </router-view>
+  </div>
 </template>
 
 <style scoped>
-
+  .footer {
+    height: 200px;
+  }
 </style>

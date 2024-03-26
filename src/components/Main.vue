@@ -1,0 +1,378 @@
+
+<template>
+  <Top></Top>
+
+  <div class="container">
+    <el-row class="teamInfo">
+      <el-col :span="8">
+        <div class="info">
+          <div class="title">
+            剧绎潇湘
+          </div>
+          <div class="brief">
+            剧绎潇湘工作坊致力于用“剧本演绎”赋能中小学生红色教育，用剧本演绎这一全新的红色教育方式，
+            创新教育模式、传承红色精神、发扬红色文化、盘活红色资源、为地方文旅注入新活力、承担培根
+            铸魂的时代使命。工作坊将整合湖南红色资源，将红色资源的红色故事打造成独特的“剧本演绎”，
+            用剧本演绎讲好湖南的红色故事，打造红色教育新模式，形成红色剧本矩阵。
+            工作坊由湖南师范大学、中南大学、中南财经政法大学联合创立，湖南师范大学新闻与传播学院主营，
+            涵盖了戏剧影视文学、汉语言文学、美术学、播音与主持艺术、广播电视编导、财政学、软件工程等
+            不同专业，学科交叉，专业实力过硬，综合实力强。
+          </div>
+          <el-button class="learn-more">
+            了解更多
+          </el-button>
+        </div>
+      </el-col>
+      <el-col :span="8" :offset="7">
+        <img class="logo" src="../assets/images/logo.png" alt="failed">
+      </el-col>
+    </el-row>
+
+    <div class="contentInfo">
+      <el-row>
+        <el-col :span="24">
+          <img src="../assets/images/introduction.png" alt="failed">
+        </el-col>
+      </el-row>
+      <el-row>
+          <el-col :span="4" class="content-title">
+            剧本简介
+          </el-col>
+          <el-col :span="16" :offset="2" class="content-brief">
+            大梦谁先觉，平生我自知。中华儿女从连天战火中醒来，在战争的洪流里，
+            没有人可以独善其身。兵连祸结，白骨露野，时代的尘埃落在每个人身上都
+            是一座大山。在等待援军明日到达的四十七天里，当兵临城下，沸反盈天，
+            是步步为营，保存实力等待东山再起；还是顺应内心，只做自己认为正确的
+            事？是听从命运安排，退守以避险；还是担起家国责任，捐躯赴国难？当你
+            主动摒弃后来者的上帝视角时，当你以全新的身份站在历史的岔路口时，当
+            你和他们一样迷茫时，你是否还能做出正确的选择？
+          </el-col>
+          <el-col :span="1">
+            <el-button class="content-learn-more">
+              了解更多
+            </el-button>
+          </el-col>
+      </el-row>
+    </div>
+  </div>
+
+  <div class="feedback-brief">
+    <el-row>
+      <span class="feedback-title">
+        真实用户反馈
+      </span>
+    </el-row>
+    <el-row>
+      <span class="feedback-introduction">
+        来看看用户对我们的评价吧!
+      </span>
+    </el-row>
+    <el-row>
+      <el-button class="feedback-more">
+        查看更多
+      </el-button>
+    </el-row>
+    <el-scrollbar>
+      <div class="scrollbar-content">
+        <div class="feedback-area">
+          <el-row>
+            <div class="feedback-rate">
+              <el-rate
+                  v-model="value"
+                  disabled
+                  size="large"
+                  text-color="#ff9900"
+                  score-template="{value} points"
+                  class="rate"
+              />
+            </div>
+          </el-row>
+          <el-row class="feedback-content">
+            <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+          </el-row>
+          <el-row>
+            <el-col :span="3" class="feedback-from">
+              <el-avatar :icon="UserFilled" />
+            </el-col>
+            <el-col :span="8" class="feedback-name">
+              {{name}}
+            </el-col>
+          </el-row>
+        </div> <div class="feedback-area">
+          <el-row>
+            <div class="feedback-rate">
+              <el-rate
+                  v-model="value"
+                  disabled
+                  size="large"
+                  text-color="#ff9900"
+                  score-template="{value} points"
+                  class="rate"
+              />
+            </div>
+          </el-row>
+          <el-row class="feedback-content">
+            <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+          </el-row>
+          <el-row>
+            <el-col :span="3" class="feedback-from">
+              <el-avatar :icon="UserFilled" />
+            </el-col>
+            <el-col :span="8" class="feedback-name">
+              {{name}}
+            </el-col>
+          </el-row>
+        </div> <div class="feedback-area">
+          <el-row>
+            <div class="feedback-rate">
+              <el-rate
+                  v-model="value"
+                  disabled
+                  size="large"
+                  text-color="#ff9900"
+                  score-template="{value} points"
+                  class="rate"
+              />
+            </div>
+          </el-row>
+          <el-row class="feedback-content">
+            <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+          </el-row>
+          <el-row>
+            <el-col :span="3" class="feedback-from">
+              <el-avatar :icon="UserFilled" />
+            </el-col>
+            <el-col :span="8" class="feedback-name">
+              {{name}}
+            </el-col>
+          </el-row>
+        </div> <div class="feedback-area">
+          <el-row>
+            <div class="feedback-rate">
+              <el-rate
+                  v-model="value"
+                  disabled
+                  size="large"
+                  text-color="#ff9900"
+                  score-template="{value} points"
+                  class="rate"
+              />
+            </div>
+          </el-row>
+          <el-row class="feedback-content">
+            <m-audio :src="src" text="播放"></m-audio>
+          </el-row>
+          <el-row>
+            <el-col :span="3" class="feedback-from">
+              <el-avatar :icon="UserFilled" />
+            </el-col>
+            <el-col :span="8" class="feedback-name">
+              {{name}}
+            </el-col>
+          </el-row>
+        </div> <div class="feedback-area">
+          <el-row>
+            <div class="feedback-rate">
+              <el-rate
+                  v-model="value"
+                  disabled
+                  size="large"
+                  text-color="#ff9900"
+                  score-template="{value} points"
+                  class="rate"
+              />
+            </div>
+          </el-row>
+          <el-row class="feedback-content">
+            <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+          </el-row>
+          <el-row>
+            <el-col :span="3" class="feedback-from">
+              <el-avatar :icon="UserFilled" />
+            </el-col>
+            <el-col :span="8" class="feedback-name">
+              {{name}}
+            </el-col>
+          </el-row>
+        </div> <div class="feedback-area">
+          <el-row>
+            <div class="feedback-rate">
+              <el-rate
+                  v-model="value"
+
+                  size="large"
+                  text-color="#ff9900"
+                  score-template="{value} points"
+                  class="rate"
+              />
+            </div>
+          </el-row>
+          <el-row class="feedback-content">
+            <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+          </el-row>
+          <el-row>
+            <el-col :span="3" class="feedback-from">
+              <el-avatar :icon="UserFilled" />
+            </el-col>
+            <el-col :span="8" class="feedback-name">
+              {{name}}
+            </el-col>
+          </el-row>
+        </div>
+      </div>
+    </el-scrollbar>
+
+    <el-row class="scroll-button">
+      <el-col>
+        <el-button circle size="large" id="left">
+          <img src="../assets/images/left.png" alt="">
+        </el-button>
+        <el-button circle size="large">
+          <img src="../assets/images/right.png" alt="">
+        </el-button>
+      </el-col>
+    </el-row>
+  </div>
+
+  <Bottom></Bottom>
+</template>
+
+<script setup>
+import Top from "../components/commons/Top.vue";
+import { ref } from 'vue'
+import Bottom from "../components/commons/Bottom.vue";
+import {UserFilled} from "@element-plus/icons-vue";
+
+const value = ref(3.7)
+const name = ref('陈同学')
+const src = "../assets/audio/test.mp3"
+</script>
+
+<style scoped>
+
+/*#region团队介绍部分*/
+.container {
+  padding: 0 80px;
+
+}
+
+.container .teamInfo {
+  margin-top: 70px;
+}
+
+.container .title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 70px;
+}
+
+.container .brief {
+  margin: 20px 0;
+}
+
+.container .learn-more {
+  background-color:#E93628;
+  color:white;
+}
+
+.container .logo {
+  height: 480px;
+  width: 480px;
+}
+/*#endregion团队介绍*/
+
+/*region剧本介绍*/
+.container .contentInfo img{
+  margin-top: 80px;
+  width: 1300px;
+  height: 500px;
+}
+
+.container .contentInfo .content-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.container .contentInfo .content-brief {
+  margin-top: 20px;
+}
+
+.container .contentInfo .content-learn-more {
+  margin-top: 110px;
+  margin-left: 20px;
+  background-color:#E93628;
+  color:white;
+}
+
+/*endregion剧本介绍*/
+
+/*#region评价反馈*/
+.feedback-brief {
+  padding: 0 80px;
+  margin-top: 40px;
+}
+
+.feedback-brief .feedback-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 70px;
+}
+
+.feedback-brief .feedback-introduction {
+  margin: 10px 0;
+}
+
+.feedback-brief .feedback-more {
+  background-color:#E93628;
+  color:white;
+  margin-bottom: 30px;
+}
+
+.scrollbar-content {
+  display: flex;
+}
+
+.scroll-button {
+  margin-top: 15px;
+}
+
+.scroll-button #left {
+  margin-right: 20px;
+}
+
+.feedback-area {
+  height: 243px;
+  width: 330px;
+  min-width: 330px;
+  border:1px solid black;
+  border-radius: 10px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.rate {
+  font-size: 40px;
+}
+
+.feedback-rate {
+  margin-left: 10px;
+}
+
+.feedback-content {
+  height: 150px;
+  margin: auto 10px;
+}
+
+.feedback-from {
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.feedback-name {
+  margin-top: 7px;
+}
+
+/*#endregion*/
+</style>
