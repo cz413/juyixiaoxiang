@@ -68,7 +68,7 @@
       </span>
     </el-row>
     <el-row>
-      <el-button class="feedback-more">
+      <el-button class="feedback-more" @click="clickToFeedback">
         查看更多
       </el-button>
     </el-row>
@@ -170,7 +170,8 @@
               {{name}}
             </el-col>
           </el-row>
-        </div> <div class="feedback-area">
+        </div>
+        <div class="feedback-area">
           <el-row>
             <div class="feedback-rate">
               <el-rate
@@ -242,10 +243,22 @@ import Top from "../components/commons/Top.vue";
 import { ref } from 'vue'
 import Bottom from "../components/commons/Bottom.vue";
 import {UserFilled} from "@element-plus/icons-vue";
+import { useRouter } from "vue-router";
+
+//使用路径变量
+const router = useRouter();
 
 const value = ref(3.7)
 const name = ref('陈同学')
 const src = "../assets/audio/test.mp3"
+
+const clickToFeedback=()=>{
+  router.push({
+    path:'feedback'
+  })
+}
+
+
 </script>
 
 <style scoped>
@@ -346,6 +359,7 @@ const src = "../assets/audio/test.mp3"
   width: 330px;
   min-width: 330px;
   border:1px solid black;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-right: 40px;
   margin-bottom: 20px;

@@ -14,10 +14,10 @@
         剧绎潇湘
       </el-menu-item>
       <div class="flex-grow"/>
-        <el-menu-item index="1">首页</el-menu-item>
+        <el-menu-item index="1" @click="clickToHome">首页</el-menu-item>
         <el-menu-item index="2">工作坊</el-menu-item>
         <el-menu-item index="3">剧本</el-menu-item>
-        <el-menu-item index="4">剧本反馈</el-menu-item>
+        <el-menu-item index="4" @click="clickToFeedback">剧本反馈</el-menu-item>
         <el-menu-item index="5">史实介绍</el-menu-item>
         <el-menu-item index="6">合作单位</el-menu-item>
     </el-menu>
@@ -25,8 +25,23 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from "vue-router";
 
+//使用路径变量
+const router = useRouter();
 const activeIndex = ref('1')
+
+const clickToHome=()=>{
+  router.push({
+    path:'main'
+  })
+}
+
+const clickToFeedback=()=>{
+  router.push({
+    path:'feedback'
+  })
+}
 
 </script>
 
