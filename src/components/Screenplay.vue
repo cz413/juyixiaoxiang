@@ -2,6 +2,7 @@
   import {ref} from "vue";
   import Top from "../components/commons/Top.vue";
   import Bottom from "../components/commons/Bottom.vue";
+  import {onMounted} from "vue";
 
   const imgCards = ref([
     new URL("../assets/images/roles/role1.jpg", import.meta.url),
@@ -33,6 +34,10 @@
     { timestamp: '2024-06-30', content: 'Event 3' },
     // Add more events as needed
   ])
+
+  onMounted(()=>{
+    window.scrollTo(0, 0);
+  })
 
 </script>
 

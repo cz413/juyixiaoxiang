@@ -1,6 +1,6 @@
 <script setup>
 import Top from "../components/commons/Top.vue";
-import { ref } from 'vue'
+import {onMounted, ref} from 'vue'
 import Bottom from "../components/commons/Bottom.vue";
 import {UserFilled} from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";
@@ -8,6 +8,9 @@ import Opinion from "../components/commons/Opinion.vue";
 
 //使用路径变量
 const router = useRouter();
+onMounted(()=>{
+  window.scrollTo(0, 0);
+})
 
 const value = ref(5)
 const name = ref('陈同学')

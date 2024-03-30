@@ -1,7 +1,8 @@
 
 <template>
     <el-menu
-        :default-active="activeIndex"
+        :default-active="$route.path"
+        :router="true"
         class="el-menu-top"
         mode="horizontal"
         :ellipsis="false"
@@ -13,12 +14,12 @@
         <img src="../../assets/images/logo-removebg-preview.png" alt="failed">剧绎潇湘工作坊
       </el-menu-item>
       <div class="flex-grow"/>
-        <el-menu-item index="1" @click="clickToHome">首页</el-menu-item>
-        <el-menu-item index="2" @click="clickToTeam">工作坊</el-menu-item>
-        <el-menu-item index="3" @click="clickToScreenplay">剧本</el-menu-item>
-        <el-menu-item index="4" @click="clickToFeedback">剧本反馈</el-menu-item>
-        <el-menu-item index="5">史实介绍</el-menu-item>
-        <el-menu-item index="6">合作单位</el-menu-item>
+        <el-menu-item index="/main" @click="clickToHome">首页</el-menu-item>
+        <el-menu-item index="/team" @click="clickToTeam">工作坊</el-menu-item>
+        <el-menu-item index="/screenplay" @click="clickToScreenplay">剧本</el-menu-item>
+        <el-menu-item index="/feedback" @click="clickToFeedback">剧本反馈</el-menu-item>
+        <el-menu-item index="5" @click="clickToHome">史实介绍</el-menu-item>
+        <el-menu-item index="6" @click="clickToHome">合作单位</el-menu-item>
     </el-menu>
 </template>
 
@@ -28,7 +29,8 @@ import { useRouter } from "vue-router";
 
 //使用路径变量
 const router = useRouter();
-const activeIndex = ref('1')
+const activeIndex = router.currentRoute._value.path
+console.log(activeIndex)
 
 const clickToHome=()=>{
   router.push({
@@ -52,6 +54,10 @@ const clickToScreenplay=()=>{
   router.push({
     path:'screenplay'
   })
+}
+
+const handleMenuSelect=(index)=> {
+  activeIndex.value = index; // 切换选中的菜单项索引
 }
 
 </script>
