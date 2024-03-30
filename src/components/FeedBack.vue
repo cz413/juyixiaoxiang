@@ -13,6 +13,7 @@ const value = ref(5)
 const name = ref('陈同学')
 const src = "../assets/audio/test.mp3"
 const textarea = ref('')
+const colors = ref(['#99A9BF', '#FF1493', '#E93628'])
 
 const handleButtonClick=()=>{
   // 处理按钮点击事件
@@ -22,7 +23,14 @@ const handleButtonClick=()=>{
 
 <template>
   <Top></Top>
-
+  <el-row class="wordcloud">
+    <div class="title">
+      反馈分析
+    </div>
+    <div>
+      <img src="../assets/images/wordcloud.png" alt="failed">
+    </div>
+  </el-row>
   <el-row class="feedback-info">
     <el-col :span="8">
       <div class="info">
@@ -50,11 +58,12 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+              <span>我觉得衡阳保卫战好像就在我眼前</span>
             </el-row>
             <el-row>
               <el-col :span="3" class="feedback-from">
@@ -75,18 +84,19 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+              <span>我觉得历史离我很近</span>
             </el-row>
             <el-row>
               <el-col :span="3" class="feedback-from">
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                项同学
               </el-col>
             </el-row>
           </div>
@@ -100,18 +110,19 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+              <span>我觉得战士们都很伟大</span>
             </el-row>
             <el-row>
               <el-col :span="3" class="feedback-from">
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                谢同学
               </el-col>
             </el-row>
           </div>
@@ -125,18 +136,19 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+              <span>我觉得他们的故事应该被更多人知道</span>
             </el-row>
             <el-row>
               <el-col :span="3" class="feedback-from">
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                张同学
               </el-col>
             </el-row>
           </div>
@@ -150,18 +162,44 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+              <span>我觉得每一个人物都有属于他自己的力量</span>
             </el-row>
             <el-row>
               <el-col :span="3" class="feedback-from">
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                吴同学
+              </el-col>
+            </el-row>
+          </div><div class="feedback-area">
+            <el-row>
+              <div class="feedback-rate">
+                <el-rate
+                    v-model="value"
+                    disabled
+                    size="large"
+                    text-color="#ff9900"
+                    score-template="{value} points"
+                    class="rate"
+                    :colors="colors"
+                />
+              </div>
+            </el-row>
+            <el-row class="feedback-content">
+              <span>我觉得现在的我们更应该好好努力,报效祖国</span>
+            </el-row>
+            <el-row>
+              <el-col :span="3" class="feedback-from">
+                <el-avatar :icon="UserFilled" />
+              </el-col>
+              <el-col :span="8" class="feedback-name">
+                李同学
               </el-col>
             </el-row>
           </div>
@@ -184,6 +222,33 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
+                />
+              </div>
+            </el-row>
+            <el-row class="feedback-content">
+              <m-audio :src="src" text="播放" ></m-audio>
+            </el-row>
+            <el-row>
+              <el-col :span="3" class="feedback-from">
+                <el-avatar :icon="UserFilled" />
+              </el-col>
+              <el-col :span="8" class="feedback-name">
+                {{name}}
+              </el-col>
+            </el-row>
+          </div>
+          <div class="feedback-area">
+            <el-row>
+              <div class="feedback-rate">
+                <el-rate
+                    v-model="value"
+                    disabled
+                    size="large"
+                    text-color="#ff9900"
+                    score-template="{value} points"
+                    class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
@@ -209,6 +274,7 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
@@ -234,31 +300,7 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
-                />
-              </div>
-            </el-row>
-            <el-row class="feedback-content">
-              <m-audio :src="src" text="播放"></m-audio>
-            </el-row>
-            <el-row>
-              <el-col :span="3" class="feedback-from">
-                <el-avatar :icon="UserFilled" />
-              </el-col>
-              <el-col :span="8" class="feedback-name">
-                {{name}}
-              </el-col>
-            </el-row>
-          </div>
-          <div class="feedback-area">
-            <el-row>
-              <div class="feedback-rate">
-                <el-rate
-                    v-model="value"
-                    disabled
-                    size="large"
-                    text-color="#ff9900"
-                    score-template="{value} points"
-                    class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
@@ -293,6 +335,82 @@ const handleButtonClick=()=>{
                     text-color="#ff9900"
                     score-template="{value} points"
                     class="rate"
+                    :colors="colors"
+                />
+              </div>
+            </el-row>
+            <el-row class="feedback-content">
+              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+            </el-row>
+            <el-row>
+              <el-col :span="3" class="feedback-from">
+                <el-avatar :icon="UserFilled" />
+              </el-col>
+              <el-col :span="8" class="feedback-name">
+                {{name}}
+              </el-col>
+            </el-row>
+          </div><div class="feedback-area">
+            <el-row>
+              <div class="feedback-rate">
+                <el-rate
+                    v-model="value"
+                    disabled
+                    size="large"
+                    text-color="#ff9900"
+                    score-template="{value} points"
+                    class="rate"
+                    :colors="colors"
+                />
+              </div>
+            </el-row>
+            <el-row class="feedback-content">
+              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+            </el-row>
+            <el-row>
+              <el-col :span="3" class="feedback-from">
+                <el-avatar :icon="UserFilled" />
+              </el-col>
+              <el-col :span="8" class="feedback-name">
+                {{name}}
+              </el-col>
+            </el-row>
+          </div><div class="feedback-area">
+            <el-row>
+              <div class="feedback-rate">
+                <el-rate
+                    v-model="value"
+                    disabled
+                    size="large"
+                    text-color="#ff9900"
+                    score-template="{value} points"
+                    class="rate"
+                    :colors="colors"
+                />
+              </div>
+            </el-row>
+            <el-row class="feedback-content">
+              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+            </el-row>
+            <el-row>
+              <el-col :span="3" class="feedback-from">
+                <el-avatar :icon="UserFilled" />
+              </el-col>
+              <el-col :span="8" class="feedback-name">
+                {{name}}
+              </el-col>
+            </el-row>
+          </div><div class="feedback-area">
+            <el-row>
+              <div class="feedback-rate">
+                <el-rate
+                    v-model="value"
+                    disabled
+                    size="large"
+                    text-color="#ff9900"
+                    score-template="{value} points"
+                    class="rate"
+                    :colors="colors"
                 />
               </div>
             </el-row>
@@ -309,6 +427,7 @@ const handleButtonClick=()=>{
             </el-row>
           </div>
         </div>
+
       </el-row>
     </el-scrollbar>
   </div>
@@ -358,6 +477,20 @@ const handleButtonClick=()=>{
 
 <style scoped>
 
+  .wordcloud img {
+    height: 400px;
+    margin-top: 60px;
+    margin-left: 300px;
+  }
+
+  .wordcloud .title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+  }
+
   /*#region用户评价反馈展示*/
   .feedback-info {
     padding: 0 80px;
@@ -366,7 +499,7 @@ const handleButtonClick=()=>{
   .feedback-info .title {
     font-size: 40px;
     font-weight: bold;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-bottom: 10px;
   }
 
@@ -388,14 +521,19 @@ const handleButtonClick=()=>{
   }
 
   .feedback-area {
+    font-size: 17px;
+    font-weight: bold;
     height: 243px;
     width: 330px;
     min-width: 330px;
     border:1px solid black;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 40px;
     margin-bottom: 20px;
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover; /* 让背景图片尽可能填满整个 div */
+    background-position: center; /* 将背景图片居中 */
   }
 
   .rate {
@@ -403,18 +541,18 @@ const handleButtonClick=()=>{
   }
 
   .feedback-rate {
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
   }
 
   .feedback-content {
-    height: 150px;
-    margin: auto 10px;
+    height: 106px;
+    margin: auto 30px;
   }
 
   .feedback-from {
-    margin-left: 10px;
+    margin-left: 27px;
     margin-right: 10px;
-
   }
 
   .feedback-name {

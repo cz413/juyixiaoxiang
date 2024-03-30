@@ -18,40 +18,41 @@
             涵盖了戏剧影视文学、汉语言文学、美术学、播音与主持艺术、广播电视编导、财政学、软件工程等
             不同专业，学科交叉，专业实力过硬，综合实力强。
           </div>
-          <el-button class="learn-more">
+          <el-button @click="clickToTeam" class="learn-more">
             了解更多
           </el-button>
         </div>
       </el-col>
       <el-col :span="8" :offset="7">
-        <img class="logo" src="../assets/images/logo.png" alt="failed">
+        <img class="logo" src="../assets/images/logo.jpg" alt="failed">
       </el-col>
     </el-row>
 
     <div class="contentInfo">
       <el-row>
-        <el-col :span="24">
-          <img src="../assets/images/introduction.png" alt="failed">
+        <el-col :span="8">
+          <img src="../assets/images/cover.png" alt="failed">
         </el-col>
-      </el-row>
-      <el-row>
-          <el-col :span="4" class="content-title">
-            剧本简介
-          </el-col>
-          <el-col :span="16" :offset="2" class="content-brief">
-            大梦谁先觉，平生我自知。中华儿女从连天战火中醒来，在战争的洪流里，
-            没有人可以独善其身。兵连祸结，白骨露野，时代的尘埃落在每个人身上都
-            是一座大山。在等待援军明日到达的四十七天里，当兵临城下，沸反盈天，
-            是步步为营，保存实力等待东山再起；还是顺应内心，只做自己认为正确的
-            事？是听从命运安排，退守以避险；还是担起家国责任，捐躯赴国难？当你
-            主动摒弃后来者的上帝视角时，当你以全新的身份站在历史的岔路口时，当
-            你和他们一样迷茫时，你是否还能做出正确的选择？
-          </el-col>
-          <el-col :span="1">
-            <el-button class="content-learn-more">
+        <el-col :span="9" :offset="7">
+          <div>
+            <div class="contentInfo-title">
+              剧本简介
+            </div>
+            <div class="contentInfo-brief">
+              大梦谁先觉，平生我自知。中华儿女从连天战火中醒来，在战争的洪流里，
+              没有人可以独善其身。兵连祸结，白骨露野，时代的尘埃落在每个人身上都
+              是一座大山。在等待援军明日到达的四十七天里，当兵临城下，沸反盈天，
+              是步步为营，保存实力等待东山再起；还是顺应内心，只做自己认为正确的
+              事？是听从命运安排，退守以避险；还是担起家国责任，捐躯赴国难？当你
+              主动摒弃后来者的上帝视角时，当你以全新的身份站在历史的岔路口时，当
+              你和他们一样迷茫时，你是否还能做出正确的选择？
+            </div>
+            <el-button @click="clickToScreenplay" class="contentInfo-learn-more">
               了解更多
             </el-button>
-          </el-col>
+          </div>
+        </el-col>
+
       </el-row>
     </div>
   </div>
@@ -59,7 +60,7 @@
   <div class="feedback-brief">
     <el-row>
       <span class="feedback-title">
-        真实用户反馈
+        用户情感反馈
       </span>
     </el-row>
     <el-row>
@@ -83,6 +84,7 @@
                   size="large"
                   text-color="#ff9900"
                   score-template="{value} points"
+                  :colors="colors"
                   class="rate"
               />
             </div>
@@ -107,6 +109,7 @@
                   size="large"
                   text-color="#ff9900"
                   score-template="{value} points"
+                  :colors="colors"
                   class="rate"
               />
             </div>
@@ -131,6 +134,7 @@
                   size="large"
                   text-color="#ff9900"
                   score-template="{value} points"
+                  :colors="colors"
                   class="rate"
               />
             </div>
@@ -155,6 +159,7 @@
                   size="large"
                   text-color="#ff9900"
                   score-template="{value} points"
+                  :colors="colors"
                   class="rate"
               />
             </div>
@@ -180,6 +185,7 @@
                   size="large"
                   text-color="#ff9900"
                   score-template="{value} points"
+                  :colors="colors"
                   class="rate"
               />
             </div>
@@ -200,10 +206,10 @@
             <div class="feedback-rate">
               <el-rate
                   v-model="value"
-
                   size="large"
                   text-color="#ff9900"
                   score-template="{value} points"
+                  :colors="colors"
                   class="rate"
               />
             </div>
@@ -251,10 +257,23 @@ const router = useRouter();
 const value = ref(3.7)
 const name = ref('陈同学')
 const src = "../assets/audio/test.mp3"
+const colors = ref(['#99A9BF', '#FF1493', '#E93628'])
 
 const clickToFeedback=()=>{
   router.push({
     path:'feedback'
+  })
+}
+
+const clickToTeam=()=>{
+  router.push({
+    path:'team'
+  })
+}
+
+const clickToScreenplay=()=>{
+  router.push({
+    path:'screenplay'
   })
 }
 
@@ -297,23 +316,22 @@ const clickToFeedback=()=>{
 /*region剧本介绍*/
 .container .contentInfo img{
   margin-top: 80px;
-  width: 1300px;
-  height: 500px;
+  width: 480px;
+  height: 550px;
 }
 
-.container .contentInfo .content-title {
+.container .contentInfo .contentInfo-title {
   font-size: 40px;
   font-weight: bold;
+  margin-top: 200px;
+}
+
+.container .contentInfo .contentInfo-brief {
   margin-top: 20px;
 }
 
-.container .contentInfo .content-brief {
+.container .contentInfo .contentInfo-learn-more {
   margin-top: 20px;
-}
-
-.container .contentInfo .content-learn-more {
-  margin-top: 110px;
-  margin-left: 20px;
   background-color:#E93628;
   color:white;
 }
@@ -355,6 +373,8 @@ const clickToFeedback=()=>{
 }
 
 .feedback-area {
+  font-size: 17px;
+  font-weight: bold;
   height: 243px;
   width: 330px;
   min-width: 330px;
@@ -363,6 +383,9 @@ const clickToFeedback=()=>{
   border-radius: 10px;
   margin-right: 40px;
   margin-bottom: 20px;
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover; /* 让背景图片尽可能填满整个 div */
+  background-position: center; /* 将背景图片居中 */
 }
 
 .rate {
@@ -370,18 +393,18 @@ const clickToFeedback=()=>{
 }
 
 .feedback-rate {
-  margin-left: 10px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 .feedback-content {
-  height: 150px;
-  margin: auto 10px;
+  height: 106px;
+  margin: auto 30px;
 }
 
 .feedback-from {
-  margin-left: 10px;
+  margin-left: 27px;
   margin-right: 10px;
-
 }
 
 .feedback-name {

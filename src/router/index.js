@@ -6,6 +6,8 @@ const routes = [
     {path: '/', redirect:'/main' },
     {path:'/main',component:()=> import("../components/Main.vue")},
     {path:'/feedback',component:()=> import("../components/FeedBack.vue")},
+    {path:'/team',component:()=> import("../components/Team.vue")},
+    {path:'/screenplay',component:()=> import("../components/Screenplay.vue")},
 ]
 
 const router = createRouter({

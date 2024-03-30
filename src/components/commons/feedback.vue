@@ -7,19 +7,6 @@ const name = ref('陈同学')
 </script>
 
 <template>
-<!--  <div  class="feedback-area">-->
-<!--    <el-row>-->
-
-<!--    </el-row>-->
-<!--    <el-row>-->
-<!--      非常感谢剧绎潇湘团队，为我们呈现了如此精彩的历史故事！-->
-<!--    </el-row>-->
-<!--    <el-row>-->
-<!--      <el-col :span="1">-->
-<!--        XXX-->
-<!--      </el-col>-->
-<!--    </el-row>-->
-<!--  </div>-->
   <div class="feedback-area">
     <el-row>
       <div class="feedback-rate">
@@ -52,6 +39,7 @@ const name = ref('陈同学')
 </template>
 
 <style scoped>
+
   .feedback-area {
     height: 243px;
     width: 330px;
