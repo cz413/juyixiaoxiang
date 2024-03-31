@@ -263,7 +263,7 @@ const handleButtonClick=()=>{
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                李同学
               </el-col>
             </el-row>
           </div>
@@ -289,7 +289,7 @@ const handleButtonClick=()=>{
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                吴同学
               </el-col>
             </el-row>
           </div>
@@ -315,7 +315,7 @@ const handleButtonClick=()=>{
                 <el-avatar :icon="UserFilled" />
               </el-col>
               <el-col :span="8" class="feedback-name">
-                {{name}}
+                向同学
               </el-col>
             </el-row>
           </div>
