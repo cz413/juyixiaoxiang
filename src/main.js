@@ -5,6 +5,7 @@ import ElementPlus from 'element-plus'
 import router from "./router/index.js";
 import audio from 'vue-mobile-audio'
 
+
 const app=createApp(App)
 app.use(ElementPlus)
 app.use(audio)

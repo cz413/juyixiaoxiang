@@ -8,6 +8,7 @@ const routes = [
     {path:'/feedback',component:()=> import("../components/FeedBack.vue")},
     {path:'/team',component:()=> import("../components/Team.vue")},
     {path:'/screenplay',component:()=> import("../components/Screenplay.vue")},
+    {path:'/cooperate',component:()=> import("../components/Cooperate.vue")},
 ]
 
 const router = createRouter({

@@ -329,104 +329,39 @@ const handleButtonClick=()=>{
       <el-row>
         <div class="scrollbar-content">
           <div class="feedback-area">
-            <el-row>
-              <div class="feedback-rate">
-                <el-rate
-                    v-model="value"
-                    disabled
-                    size="large"
-                    text-color="#ff9900"
-                    score-template="{value} points"
-                    class="rate"
-                    :colors="colors"
-                />
-              </div>
-            </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
-            </el-row>
-            <el-row>
-              <el-col :span="3" class="feedback-from">
-                <el-avatar :icon="UserFilled" />
-              </el-col>
-              <el-col :span="8" class="feedback-name">
-                {{name}}
-              </el-col>
+              <video width="270px" height="210px" controls>
+                <source src="../assets/audio/1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
             </el-row>
           </div><div class="feedback-area">
-            <el-row>
-              <div class="feedback-rate">
-                <el-rate
-                    v-model="value"
-                    disabled
-                    size="large"
-                    text-color="#ff9900"
-                    score-template="{value} points"
-                    class="rate"
-                    :colors="colors"
-                />
-              </div>
-            </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
-            </el-row>
-            <el-row>
-              <el-col :span="3" class="feedback-from">
-                <el-avatar :icon="UserFilled" />
-              </el-col>
-              <el-col :span="8" class="feedback-name">
-                {{name}}
-              </el-col>
+              <video width="270px" height="210px" controls>
+                <source src="../assets/audio/2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
             </el-row>
           </div><div class="feedback-area">
-            <el-row>
-              <div class="feedback-rate">
-                <el-rate
-                    v-model="value"
-                    disabled
-                    size="large"
-                    text-color="#ff9900"
-                    score-template="{value} points"
-                    class="rate"
-                    :colors="colors"
-                />
-              </div>
-            </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
-            </el-row>
-            <el-row>
-              <el-col :span="3" class="feedback-from">
-                <el-avatar :icon="UserFilled" />
-              </el-col>
-              <el-col :span="8" class="feedback-name">
-                {{name}}
-              </el-col>
+              <video width="270px" height="210px" controls>
+                <source src="../assets/audio/3.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
             </el-row>
           </div><div class="feedback-area">
-            <el-row>
-              <div class="feedback-rate">
-                <el-rate
-                    v-model="value"
-                    disabled
-                    size="large"
-                    text-color="#ff9900"
-                    score-template="{value} points"
-                    class="rate"
-                    :colors="colors"
-                />
-              </div>
-            </el-row>
             <el-row class="feedback-content">
-              <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
+              <video width="270px" height="210px" controls>
+                <source src="../assets/audio/4.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
             </el-row>
-            <el-row>
-              <el-col :span="3" class="feedback-from">
-                <el-avatar :icon="UserFilled" />
-              </el-col>
-              <el-col :span="8" class="feedback-name">
-                {{name}}
-              </el-col>
+          </div><div class="feedback-area">
+            <el-row class="feedback-content">
+              <video width="270px" height="210px" controls>
+                <source src="../assets/audio/5.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
             </el-row>
           </div>
         </div>

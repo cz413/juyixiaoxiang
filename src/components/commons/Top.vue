@@ -18,8 +18,7 @@
         <el-menu-item index="/team" @click="clickToTeam">工作坊</el-menu-item>
         <el-menu-item index="/screenplay" @click="clickToScreenplay">剧本</el-menu-item>
         <el-menu-item index="/feedback" @click="clickToFeedback">剧本反馈</el-menu-item>
-        <el-menu-item index="5" @click="clickToHome">史实介绍</el-menu-item>
-        <el-menu-item index="6" @click="clickToHome">合作单位</el-menu-item>
+        <el-menu-item index="/cooperate" @click="clickToCooperate">合作单位</el-menu-item>
     </el-menu>
 </template>
 
@@ -53,6 +52,12 @@ const clickToTeam=()=>{
 const clickToScreenplay=()=>{
   router.push({
     path:'screenplay'
+  })
+}
+
+const clickToCooperate=()=>{
+  router.push({
+    path:'cooperate'
   })
 }
 

@@ -11,6 +11,7 @@
           <ul class="bottom-links-list clearfix">
             <li><a href="#">关于我们</a></li>
             <li><a href="#">联系我们</a></li>
+            <li><a href="https://baike.baidu.com/item/%E8%A1%A1%E9%98%B3%E4%BC%9A%E6%88%98/921349">史实介绍</a></li>
             <li><a href="#">隐私政策</a></li>
             <li><a href="#">服务条款</a></li>
             <li><a href="#">友情链接</a></li>
