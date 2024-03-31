@@ -237,55 +237,55 @@ onMounted(()=>{
       动态
     </div>
       <el-timeline style="max-width: 400px">
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2024/2/26" placement="top">
           <el-card>
             <h4>团队成员在衡阳保卫战纪念馆调研</h4>
             <img src="../assets/images/activities/activity9.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2024/1/20" placement="top">
           <el-card>
             <h4>团队成员向衡阳抗战纪念碑鞠躬</h4>
             <img src="../assets/images/activities/activity8.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2024/1/19" placement="top">
           <el-card>
             <h4>衡阳抗战纪念馆讲解员为团队成员细心讲解</h4>
             <img src="../assets/images/activities/activity7.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2023/7/20" placement="top">
           <el-card>
             <h4>团队成员参观衡阳‘抗战纪念馆'</h4>
             <img src="../assets/images/activities/activity6.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2023/7/15" placement="top">
           <el-card>
             <h4>团队负责人跟随师生共同研学</h4>
             <img src="../assets/images/activities/activity5.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2023/7/12" placement="top">
           <el-card>
             <h4>团队负责人与韶山教育局研学相关负责人友好交流</h4>
             <img src="../assets/images/activities/activity4.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2023/7/12" placement="top">
           <el-card>
             <h4>韶山思政基地思政大课堂负责人为调研团队介绍研学相关情况</h4>
             <img src="../assets/images/activities/activity3.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item center timestamp="2018/4/2" placement="top">
+        <el-timeline-item center timestamp="2023/7/11" placement="top">
           <el-card>
             <h4>团队负责人对研学学术进行深度采访</h4>
             <img src="../assets/images/activities/activity2.png" alt="">
           </el-card>
         </el-timeline-item>
-        <el-timeline-item timestamp="2018/4/2" placement="top">
+        <el-timeline-item timestamp="2023/7/9" placement="top">
           <el-card>
             <h4>团队到达韶山进行实地调研</h4>
             <img src="../assets/images/activities/activity1.png" alt="">
