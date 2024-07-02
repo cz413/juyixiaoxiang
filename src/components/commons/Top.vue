@@ -6,12 +6,13 @@
         class="el-menu-top"
         mode="horizontal"
         :ellipsis="false"
-        background-color="#E93628"
+        background-color="rgb(120,21,13)"
         text-color="#fff"
         active-text-color="#fff"
     >
       <el-menu-item index="0" id="name">
-        <img src="../../assets/images/logo-removebg-preview.png" alt="failed">剧绎潇湘工作坊
+        <img src="../../assets/images/logo-removebg-preview.png" alt="failed">
+        <span>剧绎潇湘工作坊</span>
       </el-menu-item>
       <div class="flex-grow"/>
         <el-menu-item index="/main" @click="clickToHome">首页</el-menu-item>
@@ -75,9 +76,14 @@ const handleMenuSelect=(index)=> {
     margin-top: 6px;
     margin-right: 10px;
   }
+  span {
+    font-size: 25px;
+  }
 }
 
+@import url("../../assets/font.css");
 .el-menu-top {
+  font-family: Alimama;
   padding: 0 80px;
   height:70px;
   line-height: 70px;

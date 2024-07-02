@@ -2,76 +2,85 @@
 import { ref } from 'vue'
 import {UserFilled} from "@element-plus/icons-vue";
 
-const value = ref(3.7)
-const name = ref('陈同学')
+/*从父组件中取出传入的值value，name和content*/
+const props = defineProps({
+  value: {
+    type: Number,
+    default: 3.7
+  },
+  name: {
+    type: String,
+    default: '陈同学'
+  },
+  content: {
+    type: String,
+    default: '感谢剧绎潇湘团队，感谢衡阳，在这样的宣传下我孩子逐渐懂了许多红色知识'
+  }
+})
+const value = props.value
+const name = props.name
+const content = props.content
 </script>
 
 <template>
-  <div class="feedback-area">
-    <el-row>
-      <div class="feedback-rate">
-        <el-rate
-            v-model="value"
-            disabled
-            size="large"
-            text-color="#ff9900"
-            score-template="{value} points"
-            class="rate"
-        />
+  <div class="feedback-container">
+    <div class="feedback-title">
+      <div class="feedback-title-icon">
+        <img src="../../assets/images/main/person.png" alt="">
       </div>
-    </el-row>
-
-    <el-row class="feedback-content">
-      <span>非常感谢剧绎潇湘团队为我们呈现了如此精彩的历史故事！</span>
-    </el-row>
-
-    <el-row>
-      <el-col :span="3" class="feedback-from">
-        <el-avatar :icon="UserFilled" />
-      </el-col>
-      <el-col :span="8" class="feedback-name">
+      <div class="feedback-title-name">
         {{name}}
-      </el-col>
-    </el-row>
-
-
+      </div>
+    </div>
+    <div class="feedback-content">
+      {{content}}
+    </div>
+    <div class="feedback-rate">
+      <el-rate
+          v-model="value"
+          disabled
+          text-color="#ff9900"
+          :colors="['#99A9BF', '#F7BA2A', '#FEEAB6']"
+      />
+    </div>
   </div>
+
 </template>
 
 <style scoped>
-
-  .feedback-area {
-    height: 243px;
-    width: 330px;
-    min-width: 330px;
-    border:1px solid black;
-    border-radius: 10px;
-    margin-right: 40px;
-    margin-bottom: 20px;
+  .feedback-container {
+    height: 270px;
+    margin-top:30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 40px;
+    background-image: linear-gradient(to bottom,rgb(122, 8, 8),rgb(255, 198, 198));
+    border-radius: 40px;
+    color: white;
+    position: relative;
   }
 
-  .rate {
-    font-size: 40px;
+  .feedback-container .feedback-title {
+    .feedback-title-icon{
+      position: absolute;
+      display: flex;
+      top: -12%;
+      img{
+        height: 70px;
+      }
+    }
+    .feedback-title-name{
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
   }
 
-  .feedback-rate {
-    margin-left: 10px;
+  .feedback-container .feedback-content {
+    height:140px;
+    width: 160px;
   }
 
-  .feedback-content {
-    height: 150px;
-    margin: auto 10px;
+  .feedback-container .feedback-rate {
+    margin-left: 30%;
   }
-
-  .feedback-from {
-    margin-left: 10px;
-    margin-right: 10px;
-
-  }
-
-  .feedback-name {
-    margin-top: 7px;
-  }
-
-
 </style>

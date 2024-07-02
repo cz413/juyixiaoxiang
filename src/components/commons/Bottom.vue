@@ -18,7 +18,7 @@
             <li><a href="#">反馈建议</a></li>
             <li><a href="#">Cookie设置</a></li>
           </ul>
-          <div class="copyright">©copywrite juyingxiaoxiang</div>
+          <div class="copyright">©copywrite 剧绎潇湘</div>
         </div>
       </div>
     </div>
