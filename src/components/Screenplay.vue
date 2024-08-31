@@ -3,6 +3,7 @@
   import Top from "../components/commons/Top.vue";
   import Bottom from "../components/commons/Bottom.vue";
   import {onMounted} from "vue";
+  import Bottom_Flag from "../components/commons/Bottom_Flag.vue";
 
   const imgCards = ref([
     new URL("../assets/images/roles/role1.jpg", import.meta.url),
@@ -43,33 +44,30 @@
 
 <template>
   <Top></Top>
-
-  <div class="container">
+  <div class="contentInfo">
     <el-row>
-      <el-col :span="8" class="cover">
-        <img src="../assets/images/cover.png" alt="failed">
+      <el-col :span="6" :offset="3">
+        <img src="../assets/images/cover.png" alt="failed" id="cover">
       </el-col>
-      <el-col :span="14" :offset="2" class="introduction">
-        <div class="title">
-          《四十七天·衡阳》
-        </div>
-        <div class="brief">
-          大梦谁先觉，平生我自知。中华儿女从连天战火中醒来，在战争的洪流里，
-          没有人可以独善其身。兵连祸结，白骨露野，时代的尘埃落在每个人身上都是一
-          座大山。在等待援军明日到达的四十七天里，当兵临城下，沸反盈天，是步步为
-          营，保存实力等待东山再起；还是顺应内心，只做自己认为正确的事？是听从命
-          运安排，退守以避险；还是担起家国责任，捐躯赴国难？当你主动摒弃后来者的
-          上帝视角时，当你以全新的身份站在历史的岔路口时，当你和他们一样迷茫时，
-          你是否还能做出正确的选择？<br>
-          这是一种全新的红色教育方式。它以衡阳保卫战这一历史事件为背景，并有
-          机选取、结合了时下流行的狼人杀、剧本杀等游戏元素进行设计。在这款游戏中，
-          每位玩家会沉浸式扮演一个此事件中的人物，重返历史现场，通过演绎、搜证、
-          解谜、推理、讨论等互动环节一步步完善自己的逻辑链，推动剧情发展，重现衡
-          阳保卫战这一旷日持久、全民皆兵的伟大战役。战争不会给你时间思考，每一次
-          选择都是你内心的回答。
+      <el-col :span="8" :offset="4">
+        <div>
+          <div class="contentInfo-title">
+            <img src="../assets/images/main/剧本简介.png" alt="">
+          </div>
+          <div class="contentInfo-brief">
+            大梦谁先觉，平生我自知。中华儿女从连天战火中醒来，在战争的洪流里，
+            没有人可以独善其身。兵连祸结，白骨露野，时代的尘埃落在每个人身上都
+            是一座大山。在等待援军明日到达的四十七天里，当兵临城下，沸反盈天，
+            是步步为营，保存实力等待东山再起；还是顺应内心，只做自己认为正确的
+            事？是听从命运安排，退守以避险；还是担起家国责任，捐躯赴国难？当你
+            主动摒弃后来者的上帝视角时，当你以全新的身份站在历史的岔路口时，当
+            你和他们一样迷茫时，你是否还能做出正确的选择？
+          </div>
         </div>
       </el-col>
     </el-row>
+  </div>
+  <div class="container">
     <el-row>
       <div class="process">游戏过程</div>
         <el-steps style="max-width: 1400px;" :active="0">
@@ -104,76 +102,86 @@
         </el-steps>
     </el-row>
 
-    <el-row>
-      <el-col :span="11">
-        <div class="roles">
-          <div class="catalog">人物卡</div>
-          <el-carousel :interval="4000" type="card" height="450px" indicator-position="outside">
-            <el-carousel-item v-for="(item,index) in imgCards" :key="index">
-              <img :src="item" alt="failed">
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-      </el-col>
-      <el-col :span="11" :offset="2">
-        <div class="items">
-          <div class="catalog">道具卡</div>
-          <el-carousel :interval="4000" type="card" height="450px" indicator-position="outside">
-            <el-carousel-item v-for="(item,index) in imgItems" :key="index">
-              <img :src="item" alt="failed">
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-      </el-col>
-    </el-row>
+    <div class="roles">
+      <div class="catalog">人物卡</div>
+      <el-carousel :interval="4000" type="card" height="450px" indicator-position="outside">
+        <el-carousel-item v-for="(item,index) in imgCards" :key="index">
+          <img :src="item" alt="failed">
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
+    <div class="items">
+      <div class="catalog">道具卡</div>
+      <el-carousel :interval="4000" type="card" height="450px" indicator-position="outside">
+        <el-carousel-item v-for="(item,index) in imgItems" :key="index">
+          <img :src="item" alt="failed">
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
   </div>
 
-  <Bottom></Bottom>
+  <Bottom_Flag></Bottom_Flag>
+
+<!--  <Bottom></Bottom>-->
 </template>
 
 <style scoped>
 
   .container {
-    margin: 0 80px;
+    padding: 0 80px;
+    background-image: linear-gradient(to bottom, rgb(255, 219, 212), rgb(255, 255, 255));
   }
-
-  .container .cover img{
-    margin-top: 80px;
-    width: 380px;
-    height: 450px;
+  .contentInfo {
+    height: 740px;
+    background-image: url("../assets/images/main/background2.png");
+    #cover{
+      border-radius: 20px;
+      margin-top: 100px;
+      height: 550px;
+    }
+    button{
+      margin-top: 650px;
+    }
   }
-
-  .container .introduction {
-    margin-top: 140px;
-  }
-
-  .container .title {
-    font-size: 30px;
+  .contentInfo .contentInfo-title {
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-top: 80px;
+    img{
+      height: 200px;
+    }
+  }
+  .contentInfo .contentInfo-brief {
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 400px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .process {
+    font-size: 30px;
     margin-top: 40px;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
 
   /*#region角色卡片轮播图*/
 
   .roles {
+    margin:0 auto;
     margin-top: 80px;
-    width: 650px;
+    width: 950px;
     text-align: center;
   }
 
   .items {
+    margin: 0 auto;
     margin-top: 80px;
-    width: 650px;
+    width: 950px;
     text-align: center;
   }
 
@@ -192,7 +200,6 @@
   }
 
   .catalog {
-    margin-left: 70px;
     font-size: 28px;
     margin-bottom: 20px;
   }

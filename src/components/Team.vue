@@ -1,7 +1,7 @@
 <script setup>
 import {onMounted, ref} from 'vue'
 import Top from "../components/commons/Top.vue";
-import Bottom from "../components/commons/Bottom.vue";
+import Bottom_Flag from "../components/commons/Bottom_Flag.vue";
 
 
 onMounted(()=>{
@@ -295,7 +295,9 @@ onMounted(()=>{
 
   </div>
 
-  <Bottom></Bottom>
+  <Bottom_Flag></Bottom_Flag>
+
+<!--  <Bottom></Bottom>-->
 </template>
 
 <style scoped>
